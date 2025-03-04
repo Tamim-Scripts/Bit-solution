@@ -26,14 +26,28 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+<!--Translation-->
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<style>
+    /* Simple Translate Button */
+    .translate-btn {
+      margin: 15px;
+        padding: 8px 16px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        background: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
 
-  <!-- =======================================================
-  * Template Name: Company
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    .translate-btn:hover {
+        background: #0056b3;
+    }
+</style>
+
 </head>
 
 <body class="index-page">
@@ -68,8 +82,11 @@
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <button class="translate-btn transactions" onclick="changeLanguage()"><i class="bi bi-translate"></i></button>
+    <!-- Google Translate Container (Hidden) -->
+    <div id="google_translate_element" style="display: none;"></div>
       </div>
-
+      
     </div>
   </header>
 
@@ -518,6 +535,8 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
 
 </body>
 
