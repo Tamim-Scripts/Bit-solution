@@ -5,7 +5,19 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,ar' }, 'google_translate_element');
+}
 
+function changeLanguage() {
+  let selectField = document.querySelector("#google_translate_element select");
+  if (selectField) {
+      selectField.selectedIndex = selectField.selectedIndex === 0 ? 1 : 0; // Toggle between English & Arabic
+      selectField.dispatchEvent(new Event('change')); // Trigger translation
+  }
+}
+
+ //----------------------------------------------
 (function() {
   "use strict";
 
@@ -46,6 +58,8 @@
 
   });
 
+
+  
   /**
    * Toggle mobile nav dropdowns
    */
@@ -193,14 +207,3 @@
 
 })();
 
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,ar' }, 'google_translate_element');
-}
-
-function changeLanguage() {
-  let selectField = document.querySelector("#google_translate_element select");
-  if (selectField) {
-      selectField.selectedIndex = selectField.selectedIndex === 0 ? 1 : 0; // Toggle between English & Arabic
-      selectField.dispatchEvent(new Event('change')); // Trigger translation
-  }
-}
