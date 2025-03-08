@@ -148,6 +148,13 @@ h6 {
   }
 }
 
+/* For Arabic Text*/
+.arabic-text {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Tajawal', sans-serif;
+  display: none; /* Hide Arabic text initially */
+}
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
