@@ -75,11 +75,11 @@
     <!-- Page Title -->
     <div class="page-title accent-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Service Details</h1>
+        <h1 class="mb-2 mb-lg-0">E-Commerce Applications</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Maintenance & Technical Support</li>
+            <li class="current">E-Commerce Services</li>
           </ol>
         </nav>
       </div>
@@ -101,42 +101,29 @@
               <a href="#">Technical Support by Phone</a>
             </div>
 
-            <h4>Maintenance & Technical Support</h4>
-            <p>Maintenance and technical support services are essential to ensure business
-                continuity and keep hardware, equipment, software, electronic systems and
-                computers in good condition, and help improve performance efficiency and save
-                time, effort and costs.</p>
+            <h4>Build Your Online Store with Our E-commerce Solutions</h4>
+            <p>Transform your business with a powerful and visually appealing e-commerce website. We create online stores that are not only easy to navigate but also optimized for conversions. From product listings to secure payment gateways, we ensure your e-commerce platform provides a seamless shopping experience for your customers.
+            </p>
           </div>
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/service2.jpeg" alt="" class="img-fluid services-img">
-            <h3>Responding to problems and malfunctions that users may face such as
-              networks, computers and their accessories</h3>
+            <img src="assets/img/E-coomerce.jpeg" alt="" class="img-fluid services-img">
+            <h3>Staying Connected: Fast Solutions for Web Application Problems.....</h3>
             <p>
-              Comprehensive maintenance contracts are a preferred choice for many
-              companies and organizations, as these services provide a comprehensive range of
-              technical, maintenance and technical support services, and help improve
-              performance efficiency, reduce costs, and improve the user and customer
-              experience.
+                We create powerful e-commerce platforms that help you sell products and services online with ease. Our solutions are designed to provide a seamless shopping experience for your customers, with features like secure payment gateways, inventory management, and mobile-friendly designs. Whether you’re a small business or a large enterprise, we build e-commerce websites that drive sales and growth.
             </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Comprehensive maintenance contracts</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Comprehensive services for maintenance and technical support</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Comprehensive services for devices, equipment, programs, electronic
-                systems and computers</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>User-friendly and mobile-responsive design</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Secure payment gateway integration</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Inventory and order management systems</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>SEO optimization for better visibility</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Custom features like wishlists, reviews, and discounts</span></li>
             </ul>
             <p>
-              Can comprehensive maintenance services be provided remotely?
+                How long does it take to build an e-commerce website?
             </p>
             <p>
-              Of course yes, comprehensive maintenance services can be provided remotely
-                using modern technologies, such as the Internet, email, live chat, phone calls,
-                and remote control of devices and computers. These modern communication
-                technologies allow engineers specialized in maintenance and technical support
-                to communicate with hardware, equipment, software, electronic systems and
-                computers remotely, diagnose and fix problems and provide the necessary
-                technical support to customers and users.. 
-
+                The timeline depends on the complexity of your requirements, but typically, a fully functional e-commerce website takes between 4 to 12 weeks. This includes design, development, testing, and deployment. We work closely with you to ensure the project is completed on time and meets your expectations.
             </p>
           </div>
 
@@ -237,7 +224,49 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script>
+    let isArabic = false;
+
+function changeLanguage() {
+    let lang = isArabic ? 'en' : 'ar';
+
+    // Translate only the main content (not the header)
+    let translateSelect = document.querySelector(".goog-te-combo");
+    if (translateSelect) {
+        translateSelect.value = lang;
+        translateSelect.dispatchEvent(new Event("change"));
+    }
+
+    // Adjust text alignment
+    let mainContent = document.querySelector("main");
+    if (mainContent) {
+        mainContent.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        mainContent.style.textAlign = lang === 'ar' ? 'right' : 'left';
+    }
+    // Keep the header (navbar) in English
+    let header = document.querySelector("header");
+        if (header) {
+            header.classList.add("notranslate");
+        }
+
+    // Toggle language state
+    isArabic = !isArabic;
+}
+
+function loadGoogleTranslate() {
+    let script = document.createElement('script');
+    script.src = "https://translate.google.com/translate_a/element.js?cb=initGoogleTranslate";
+    document.body.appendChild(script);
+}
+
+function initGoogleTranslate() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,ar', autoDisplay: false }, 'google_translate_element');
+}
+
+// Load Google Translate
+loadGoogleTranslate();
+  </script>
 
 
 </body>

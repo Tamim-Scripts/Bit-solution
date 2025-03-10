@@ -202,5 +202,11 @@ function changeLanguage() {
   if (selectField) {
       selectField.selectedIndex = selectField.selectedIndex === 0 ? 1 : 0; // Toggle between English & Arabic
       selectField.dispatchEvent(new Event('change')); // Trigger translation
+      // Keep the header (navbar) in English
+      let header = document.querySelector("header");
+      if (header) {
+          header.classList.add("notranslate");
+      }
   }
 }
+
