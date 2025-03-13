@@ -35,6 +35,11 @@
   mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
 
   /**
+   * Navbar and header
+   */
+
+   
+  /**
    * Hide mobile nav on same-page/hash links
    */
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
