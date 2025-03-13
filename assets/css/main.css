@@ -172,7 +172,8 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  position: absolute;
+  max-height: 200px;
   margin-right: 8px;
 }
 
@@ -822,6 +823,28 @@ section,
   max-height: 600px; /* Adjust as needed */
   object-fit: cover;
 }
+.hero .carousel video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .hero .carousel video {
+    max-height: 300px; /* Limit height on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .hero .carousel video {
+    max-height: 250px; /* Further adjust for extra small screens */
+  }
+}
 
 /* Adjust carousel height for smaller screens */
 @media (max-width: 768px) {
@@ -831,7 +854,7 @@ section,
   .hero .carousel img {
     max-height: 300px; /* Limit height on small screens */
   }
-}
+  }
 
 /* Ensure text container inside carousel adapts properly */
 @media (max-width: 768px) {
@@ -846,7 +869,6 @@ section,
   .hero .btn-get-started {
     font-size: 14px;
     padding: 6px 24px;
-    
   }
 }
 
