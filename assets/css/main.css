@@ -173,7 +173,11 @@ h6 {
 
 .header .logo img {
   position: absolute;
+<<<<<<< HEAD
   max-height: 200px;
+=======
+  max-height: 160px;
+>>>>>>> 2517f98 ( logo updated)
   margin-right: 8px;
 }
 
