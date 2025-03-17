@@ -212,6 +212,12 @@ function changeLanguage() {
       if (header) {
           header.classList.add("notranslate");
       }
+      // Adjust text alignment for the footer
+    let footer = document.querySelector("footer");
+    if (footer) {
+        footer.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        footer.style.textAlign = lang === 'ar' ? 'right' : 'left';
+    }
   }
 }
 
