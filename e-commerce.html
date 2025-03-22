@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Service Details - Company Bootstrap Template</title>
+  <title>Service Details - BIT Solutions</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -94,23 +94,22 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="services-list">
-              <a href="#" class="active">Periodic maintenance</a>
-              <a href="#">Repair and replacement</a>
-              <a href="#">Technical Support</a>
-              <a href="#">Cloud storage</a>
-              <a href="#">Technical Support by Phone</a>
-            </div>
+              <a href="#" class="service-link" data-title="Periodic Maintenance" data-content="Regular maintenance services to keep your hardware and software running smoothly.">Periodic Maintenance</a>
+              <a href="#" class="service-link" data-title="Visual entities" data-content="An e-commerce platform's visual entities include a hero banner, featured product cards, and category sections for easy navigation. A search bar, breadcrumbs, and dropdown menus enhance browsing. The shopping cart, checkout page, and payment gateway icons streamline purchases, while user authentication, order tracking, and reviews improve engagement etc.">Visual entities</a>
+              <a href="#" class="service-link" data-title="Technical Support" data-content="Our team is available to provide expert technical support to troubleshoot and resolve your IT issues.">Technical Support</a>
+              <a href="#" class="service-link" data-title="Cloud Storage" data-content="Secure and reliable cloud storage solutions to keep your data safe and accessible anytime.">Cloud Storage</a>
+              <a href="#" class="service-link" data-title="Technical Support by Phone" data-content="Get instant technical support over the phone from our expert team.">Technical Support by Phone</a>
+          </div>
 
-            <h4>Build Your Online Store with Our E-commerce Solutions</h4>
-            <p>Transform your business with a powerful and visually appealing e-commerce website. We create online stores that are not only easy to navigate but also optimized for conversions. From product listings to secure payment gateways, we ensure your e-commerce platform provides a seamless shopping experience for your customers.
-            </p>
+            <h4 id="service-title">Build Your Online Store with Our E-commerce Solutions</h4>
+            <p id="service-description">Transform your business with a powerful and visually appealing e-commerce website. We create online stores that are not only easy to navigate but also optimized for conversions. From product listings to secure payment gateways, we ensure your e-commerce platform provides a seamless shopping experience for your customers.</p>
           </div>
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
             <img src="assets/img/E-coomerce.jpeg" alt="" class="img-fluid services-img">
-            <h3>Staying Connected: Fast Solutions for Web Application Problems.....</h3>
+            <h3>Staying Connected: Fast Solutions for E-commerce Solutions.....</h3>
             <p>
-                We create powerful e-commerce platforms that help you sell products and services online with ease. Our solutions are designed to provide a seamless shopping experience for your customers, with features like secure payment gateways, inventory management, and mobile-friendly designs. Whether you’re a small business or a large enterprise, we build e-commerce websites that drive sales and growth.
+              We create powerful e-commerce platforms that help you sell products and services online with ease. Our solutions are designed to provide a seamless shopping experience for your customers, with features like secure payment gateways, inventory management, and mobile-friendly designs. Whether you’re a small business or a large enterprise, we build e-commerce websites that drive sales and growth.
             </p>
             <ul>
               <li><i class="bi bi-check-circle"></i> <span>User-friendly and mobile-responsive design</span></li>
@@ -120,10 +119,10 @@
               <li><i class="bi bi-check-circle"></i> <span>Custom features like wishlists, reviews, and discounts</span></li>
             </ul>
             <p>
-                How long does it take to build an e-commerce website?
+              How long does it take to build an e-commerce website?
             </p>
             <p>
-                The timeline depends on the complexity of your requirements, but typically, a fully functional e-commerce website takes between 4 to 12 weeks. This includes design, development, testing, and deployment. We work closely with you to ensure the project is completed on time and meets your expectations.
+              The timeline depends on the complexity of your requirements, but typically, a fully functional e-commerce website takes between 4 to 12 weeks. This includes design, development, testing, and deployment. We work closely with you to ensure the project is completed on time and meets your expectations.
             </p>
           </div>
 
@@ -244,7 +243,6 @@ function changeLanguage() {
         mainContent.dir = lang === 'ar' ? 'rtl' : 'ltr';
         mainContent.style.textAlign = lang === 'ar' ? 'right' : 'left';
     }
-  
     // Keep the header (navbar) in English
     let header = document.querySelector("header");
         if (header) {
@@ -267,7 +265,22 @@ function initGoogleTranslate() {
 
 // Load Google Translate
 loadGoogleTranslate();
+
+// Get elements
+const serviceTitle = document.getElementById('service-title');
+        const serviceDescription = document.getElementById('service-description');
+        const serviceLinks = document.querySelectorAll('.service-link');
+
+        // Change H4 and P content when clicking a service link
+        serviceLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent page reload
+                serviceTitle.textContent = this.getAttribute('data-title'); // Update heading
+                serviceDescription.textContent = this.getAttribute('data-content'); // Update paragraph
+            });
+        });
   </script>
+  
 
 
 </body>

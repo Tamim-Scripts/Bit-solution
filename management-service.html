@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Service Details - Company Bootstrap Template</title>
+  <title>Service Details - BIT Solutions</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -94,15 +94,15 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="services-list">
-              <a href="#" class="active">Periodic maintenance</a>
-              <a href="#">Repair and replacement</a>
-              <a href="#">Technical Support</a>
-              <a href="#">Cloud storage</a>
-              <a href="#">Technical Support by Phone</a>
-            </div>
+              <a href="#" class="service-link" data-title="Periodic Maintenance" data-content="Regular maintenance services to keep your hardware and software running smoothly.">Periodic Maintenance</a>
+              <a href="#" class="service-link" data-title="Repair and Replacement" data-content="We provide professional repair and replacement services for hardware and software to ensure smooth operation.">Repair and Replacement</a>
+              <a href="#" class="service-link" data-title="Technical Support" data-content="Our team is available to provide expert technical support to troubleshoot and resolve your IT issues.">Technical Support</a>
+              <a href="#" class="service-link" data-title="Cloud Storage" data-content="Secure and reliable cloud storage solutions to keep your data safe and accessible anytime.">Cloud Storage</a>
+              <a href="#" class="service-link" data-title="Technical Support by Phone" data-content="Get instant technical support over the phone from our expert team.">Technical Support by Phone</a>
+          </div>
 
-            <h4>Maintenance & Technical Support</h4>
-            <p>Maintenance and technical support services are essential to ensure business
+            <h4 id="service-title">Maintenance & Technical Support</h4>
+            <p id="service-description">Maintenance and technical support services are essential to ensure business
                 continuity and keep hardware, equipment, software, electronic systems and
                 computers in good condition, and help improve performance efficiency and save
                 time, effort and costs.</p>
@@ -279,7 +279,22 @@ function initGoogleTranslate() {
 
 // Load Google Translate
 loadGoogleTranslate();
+
+// Get elements
+const serviceTitle = document.getElementById('service-title');
+        const serviceDescription = document.getElementById('service-description');
+        const serviceLinks = document.querySelectorAll('.service-link');
+
+        // Change H4 and P content when clicking a service link
+        serviceLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent page reload
+                serviceTitle.textContent = this.getAttribute('data-title'); // Update heading
+                serviceDescription.textContent = this.getAttribute('data-content'); // Update paragraph
+            });
+        });
   </script>
+  
 
 
 </body>

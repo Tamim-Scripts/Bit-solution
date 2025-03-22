@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Service Details - Company Bootstrap Template</title>
+  <title>Service Details - BIT Solutions</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -75,11 +75,11 @@
     <!-- Page Title -->
     <div class="page-title accent-background">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Service Details</h1>
+        <h1 class="mb-2 mb-lg-0">POS Solutions</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Maintenance & Technical Support</li>
+            <li class="current">POS Solutions</li>
           </ol>
         </nav>
       </div>
@@ -88,42 +88,47 @@
     <!-- Service Details Section -->
     <section id="service-details" class="service-details section">
 
-      <div class="container">
+      <div class="container ">
 
         <div class="row gy-4">
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="services-list">
-              <a href="#" class="active">Web Design</a>
-              <a href="#">Software Development</a>
-              <a href="#">Product Management</a>
-              <a href="#">Graphic Design</a>
-              <a href="#">Marketing</a>
-            </div>
+              <a href="#" class="service-link" data-title="Periodic Maintenance" data-content="Regular maintenance services to keep your hardware and software running smoothly.">Periodic Maintenance</a>
+              <a href="#" class="service-link" data-title="Smart Billing & Invoicing" data-content="Fast and efficient billing system for seamless transactions.
+              Automated invoice generation with customizable templates.
+              Multi-currency and tax calculation support.">Smart Billing & Invoicing</a>
+              <a href="#" class="service-link" data-title="Technical Support" data-content="Our team is available to provide expert technical support to troubleshoot and resolve your IT issues.">Technical Support</a>
+              <a href="#" class="service-link" data-title="Inventory & Stock Management" data-content="Real-time inventory tracking to prevent stockouts.
 
-            <h4>Maintenance & Technical Support</h4>
-            <p>Maintenance and technical support services are essenƟal to ensure business
-                continuity and keep hardware, equipment, software, electronic systems and
-                computers in good condition, and help improve performance efficiency and save
-                time, effort and costs.</p>
+              Automated stock updates and low-stock alerts.
+              
+              Barcode & QR code scanning for easy product identification.">Inventory & Stock Management</a>
+              <a href="#" class="service-link" data-title="Technical Support by Phone" data-content="Get instant technical support over the phone from our expert team.">Technical Support by Phone</a>
+          </div>
+
+            <h4 id="service-title">POS Solutions</h4>
+            <p id="service-description">BIT Providers POS Solutions offer smart billing, real-time inventory tracking, and multi-store management for seamless operations. Our system supports multiple payment methods, loyalty programs, and detailed sales reports for better business insights. With cloud-based access, offline mode, and mobile compatibility, businesses can operate anytime, anywhere. Plus, employee role management and third-party integrations ensure a secure and efficient POS experience. 🚀</p>
           </div>
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
-            <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
+            <img src="assets/img/management service.jpeg" alt="" class="img-fluid services-img">
+            <h3>Boost your business efficiency with BIT Providers' smart, secure, and seamless POS solutions—</h3>
             <p>
-              Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+                Our system supports multiple payment methods, loyalty programs, and detailed sales reports for better business insights. With cloud-based access, offline mode, and mobile compatibility, businesses can operate anytime, anywhere. Plus, employee role management and third-party integrations ensure a secure and efficient POS experience. 🚀
             </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Smart Billing & Invoicing</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Inventory & Stock Management</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Multi-Store & Branch Management</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Integrated Payment Solutions</span></li>
             </ul>
             <p>
-              Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+                How can BIT Providers' POS solutions help my business grow?
             </p>
             <p>
-              Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+                Our POS system streamlines billing, inventory, and customer management, supports multiple payment methods, and provides real-time sales insights, helping you make smarter business decisions and improve efficiency. 🚀
+
             </p>
           </div>
 
@@ -224,7 +229,64 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script>
+    let isArabic = false;
+
+function changeLanguage() {
+    let lang = isArabic ? 'en' : 'ar';
+
+    // Translate only the main content (not the header)
+    let translateSelect = document.querySelector(".goog-te-combo");
+    if (translateSelect) {
+        translateSelect.value = lang;
+        translateSelect.dispatchEvent(new Event("change"));
+    }
+
+    // Adjust text alignment
+    let mainContent = document.querySelector("main");
+    if (mainContent) {
+        mainContent.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        mainContent.style.textAlign = lang === 'ar' ? 'right' : 'left';
+    }
+    // Keep the header (navbar) in English
+    let header = document.querySelector("header");
+        if (header) {
+            header.classList.add("notranslate");
+        }
+
+    // Toggle language state
+    isArabic = !isArabic;
+}
+
+function loadGoogleTranslate() {
+    let script = document.createElement('script');
+    script.src = "https://translate.google.com/translate_a/element.js?cb=initGoogleTranslate";
+    document.body.appendChild(script);
+}
+
+function initGoogleTranslate() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,ar', autoDisplay: false }, 'google_translate_element');
+}
+
+// Load Google Translate
+loadGoogleTranslate();
+
+// Get elements
+const serviceTitle = document.getElementById('service-title');
+        const serviceDescription = document.getElementById('service-description');
+        const serviceLinks = document.querySelectorAll('.service-link');
+
+        // Change H4 and P content when clicking a service link
+        serviceLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent page reload
+                serviceTitle.textContent = this.getAttribute('data-title'); // Update heading
+                serviceDescription.textContent = this.getAttribute('data-content'); // Update paragraph
+            });
+        });
+  </script>
+  
 
 
 </body>

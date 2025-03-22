@@ -2777,3 +2777,14 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+.services-list a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.services-list a:hover {
+  text-decoration: underline;}
