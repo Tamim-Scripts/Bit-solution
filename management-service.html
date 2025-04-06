@@ -62,10 +62,7 @@
         <a href="https://www.facebook.com/profile.php?id=61573792652592" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="https://www.instagram.com/b_it_solution/" class="instagram"><i class="bi bi-instagram"></i></a>
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        <button class="translate-btn transactions" onclick="changeLanguage()"><i class="bi bi-translate"></i></button>
-        <!-- Google Translate Container (Hidden) -->
-        <div id="google_translate_element" style="display: none;"></div>
-        </div>
+        <a href="https://b-it.co/"><button class="translate-btn transactions"> عرض باللغة العربية <i class="bi bi-translate"></i></button></a>
       
     </div>
   </header>
@@ -239,46 +236,6 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    let isArabic = false;
-
-function changeLanguage() {
-    let lang = isArabic ? 'en' : 'ar';
-
-    // Translate only the main content (not the header)
-    let translateSelect = document.querySelector(".goog-te-combo");
-    if (translateSelect) {
-        translateSelect.value = lang;
-        translateSelect.dispatchEvent(new Event("change"));
-    }
-
-    // Adjust text alignment
-    let mainContent = document.querySelector("main");
-    if (mainContent) {
-        mainContent.dir = lang === 'ar' ? 'rtl' : 'ltr';
-        mainContent.style.textAlign = lang === 'ar' ? 'right' : 'left';
-    }
-    // Keep the header (navbar) in English
-    let header = document.querySelector("header");
-        if (header) {
-            header.classList.add("notranslate");
-        }
-
-    // Toggle language state
-    isArabic = !isArabic;
-}
-
-function loadGoogleTranslate() {
-    let script = document.createElement('script');
-    script.src = "https://translate.google.com/translate_a/element.js?cb=initGoogleTranslate";
-    document.body.appendChild(script);
-}
-
-function initGoogleTranslate() {
-    new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,ar', autoDisplay: false }, 'google_translate_element');
-}
-
-// Load Google Translate
-loadGoogleTranslate();
 
 // Get elements
 const serviceTitle = document.getElementById('service-title');

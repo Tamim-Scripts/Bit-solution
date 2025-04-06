@@ -198,25 +198,6 @@ function googleTranslateElementInit() {
   new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,ar' }, 'google_translate_element');
 }
 
-function changeLanguage() {
-  let selectField = document.querySelector("#google_translate_element select");
-  if (selectField) {
-      selectField.selectedIndex = selectField.selectedIndex === 0 ? 1 : 0; // Toggle between English & Arabic
-      selectField.dispatchEvent(new Event('change')); // Trigger translation
-      // Keep the header (navbar) in English
-      let header = document.querySelector("header");
-      if (header) {
-          header.classList.add("notranslate");
-      }
-      // Adjust text alignment for the footer
-    let footer = document.querySelector("footer");
-    if (footer) {
-        footer.dir = lang === 'ar' ? 'rtl' : 'ltr';
-        footer.style.textAlign = lang === 'ar' ? 'right' : 'left';
-    }
-  }
-}
-
 if (window.location.pathname.endsWith(".html")) {
   let newPath = window.location.pathname.replace(".html", "");
   window.history.replaceState(null, "", newPath);
