@@ -520,6 +520,9 @@ Video Popup
   .mobile-nav-active .navmenu>ul {
     display: block;
   }
+  .header-social-links{
+    display: none;
+  }
 }
 
 /*--------------------------------------------------------------
